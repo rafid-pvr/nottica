@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/lib/site-config";
 
@@ -10,28 +11,38 @@ const services = [
 export default function Home() {
   return (
     <main id="home">
-      <section className="hero section-wrap" aria-labelledby="hero-title">
-        <div className="hero-copy">
-          <p className="eyebrow"><span /> Independent digital studio · Kerala, India</p>
-          <h1 id="hero-title">Digital experiences,<em> thoughtfully crafted.</em></h1>
-          <p className="hero-intro">Distinctive websites for businesses, people, and the moments worth celebrating. Designed with care. Built around you.</p>
-          <div className="hero-actions">
-            <a className="button button-primary" href="#designs">Explore the studio <span aria-hidden="true">↓</span></a>
-            <a className="text-link" href={siteConfig.whatsappUrl} target="_blank" rel="noreferrer">Let’s talk on WhatsApp <span aria-hidden="true">↗</span></a>
+      <section className="motion-hero" aria-labelledby="hero-title">
+        <div className="motion-hero-inner">
+          <div className="motion-hero-copy">
+            <p className="motion-kicker"><span className="motion-live-dot" /> Independent digital studio <span className="motion-kicker-place">Kerala, India · Working worldwide</span></p>
+            <h1 id="hero-title">Make your<br />next move<br /><em>memorable.</em></h1>
+            <p className="motion-hero-intro">Distinctive websites, digital storefronts, and invitations shaped around the people and ideas behind them.</p>
+            <div className="motion-hero-actions">
+              <Link className="motion-button motion-button-ivory" href="#designs">Explore the studio <span aria-hidden="true">↘</span></Link>
+              <Link className="motion-text-link" href="/contact">Tell us what you’re making <span aria-hidden="true">↗</span></Link>
+            </div>
+            <div className="motion-hero-index"><span>01 / 03</span><span>DESIGN · DEVELOPMENT · DETAIL</span></div>
+          </div>
+
+          <div className="motion-reel" aria-label="NOTTICA brand motion illustration">
+            <div className="reel-halo reel-halo-back" aria-hidden="true" />
+            <div className="reel-frame reel-frame-back" aria-hidden="true">
+              <span>INVITATIONS</span><b>For every<br />beautiful beginning.</b><i>EST. WITH CARE</i>
+            </div>
+            <div className="reel-frame reel-frame-main">
+              <span className="reel-frame-label">A DIGITAL STUDIO FOR WHAT’S NEXT</span>
+              <div className="reel-logo-wrap"><Image src="/brand/nottica-logo.png" alt="NOTTICA.in" width={1077} height={260} priority sizes="(max-width: 680px) 72vw, 34vw" /></div>
+              <span className="reel-frame-foot"><span>DESIGN THAT MOVES WITH YOU</span><span>01 — 26</span></span>
+            </div>
+            <div className="reel-frame reel-frame-front" aria-hidden="true">
+              <span>WEB EXPERIENCES</span><b>Made to<br />move you.</b><i>NOTTICA STUDIO</i>
+            </div>
+            <div className="reel-side-note" aria-hidden="true">A LITTLE MORE FEELING IN EVERY FRAME</div>
+            <span className="reel-orbit reel-orbit-one" aria-hidden="true" />
+            <span className="reel-orbit reel-orbit-two" aria-hidden="true" />
           </div>
         </div>
-        <div className="hero-art" aria-label="NOTTICA design studio identity">
-          <div className="art-orbit art-orbit-one" />
-          <div className="art-orbit art-orbit-two" />
-          <div className="art-panel">
-            <span className="art-index">N° 01 <i>—</i> STUDIO NOTES</span>
-            <div className="art-glyph" aria-hidden="true">N</div>
-            <p>Good ideas deserve<br />a thoughtful digital home.</p>
-            <span className="art-foot">DESIGN · DEVELOPMENT · DETAIL</span>
-          </div>
-          <span className="art-side-note">Made with intention · 2026</span>
-        </div>
-        <a className="scroll-note" href="#services"><span /> Scroll to explore</a>
+        <a className="motion-scroll" href="#services"><span /> SCROLL TO EXPLORE <b aria-hidden="true">↓</b></a>
       </section>
 
       <section className="intro-strip" id="approach" aria-label="Studio approach">
